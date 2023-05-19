@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import DramaCard from "../components/DramaCard"
 import Lesson from "../components/Lesson"
 import StarsCanvas from "../components/canvas/stars"
+import Myth from "../components/Myth"
 
 function Dramatic() {
 
@@ -16,7 +17,7 @@ function Dramatic() {
             <div className="px-20">
                 <DramaCard />
             </div>
-
+            <Myth />
         </div>
     )
 }

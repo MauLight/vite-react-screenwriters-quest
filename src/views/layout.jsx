@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { Context } from "../context/appContext";
 import Nav from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Layout = () => {
 
@@ -12,6 +13,7 @@ const Layout = () => {
             <Nav />
             <Outlet />
             {/*<div className='h-[4000px]'></div>*/}
+            <Footer />
         </div>
     )
 };
