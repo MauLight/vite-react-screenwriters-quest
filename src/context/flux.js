@@ -3,7 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     store: {
       token: null,
       dramatic_basis: {
-        concept: "In a general sense, what do you want to talk about? What is the source of inspiration behind your need to write? Those images in your mind, sum them up into a phrase.",
+        concept_idea: "In a general sense, what do you want to talk about? What is the source of inspiration behind your need to write? Those images in your mind, sum them up into a phrase.",
         community_value: "How your point of view can solve a global, territorial, target group, etc. problem. Appealing to broader audiences.",
         myth: "Discourse created by a series of symbols (images, scenes, sequences, etc.) that recursively signify and become its own symbol system, a global symbol. (High concept + Community value).",
         theme: "The symbolic argument between a posited truth and a lie. Generally speaking, theme is a uniform idea or subject, explored via recurring patterns and expanded through comparisons and contrast.",

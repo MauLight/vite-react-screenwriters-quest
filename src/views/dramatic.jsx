@@ -3,6 +3,7 @@ import { Context } from "../context/appContext"
 import Hero from "../components/Hero"
 import DramaCard from "../components/DramaCard"
 import Lesson from "../components/Lesson"
+import StarsCanvas from "../components/canvas/stars"
 
 function Dramatic() {
 
@@ -12,7 +13,10 @@ function Dramatic() {
         <div>
             <Hero />
             <Lesson />
-            <DramaCard />
+            <div className="px-20">
+                <DramaCard />
+            </div>
+
         </div>
     )
 }
