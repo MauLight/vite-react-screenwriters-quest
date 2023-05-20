@@ -2,10 +2,21 @@ const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       token: null,
+      concept: "Idea or Concept",
+      value: "Community Value",
       dramatic_basis: {
-        concept_idea: "In a general sense, what do you want to talk about? What is the source of inspiration behind your need to write? Those images in your mind, sum them up into a phrase.",
-        community_value: "How your point of view can solve a global, territorial, target group, etc. problem. Appealing to broader audiences.",
-        myth: "Discourse created by a series of symbols that recursively signify and become its own symbol system, a global symbol. (High concept + Community value).",
+        concept_idea: {
+          def: "In a general sense, what is the source of inspiration behind your need to write? Those images in your mind, sum them up into a phrase.",
+          example: 'The eternal battle between good and evil in a galaxy far far away.'
+        },
+        community_value: {
+          def: "How your point of view can solve a global, territorial, target group, etc. problem. Appealing to broader audiences.",
+          example: "Social elements and life experiences shape our lives until we understand them."
+        },
+        myth: {
+          def: "Discourse created by a series of symbols that recursively signify and become its own symbol system, a global symbol.",
+          example: ""
+        },
         theme: "The symbolic argument between a posited truth and a lie. Generally speaking, theme is a uniform idea or subject, explored via recurring patterns and expanded through comparisons and contrast.",
         truth: "It is the side of the theme that represents the revelation the character will have about the world because of facing the story. It's called the truth because it is actually an insight into what you, as an author, think about the theme.",
         contra_positive: "The consequence of not following the truth.",
@@ -16,10 +27,21 @@ const getState = ({ getStore, getActions, setStore }) => {
         self_revelation: "The self-revelation is the moment of change for the protagonist, and it's comprised of two distinctive parts; a psychological revelation or insight about who the protagonist truly is and a moral decision that becomes the final action of the protagonist.",
         fall_into_lie: "Sometimes, the power of the lie is too much for the protagonist to overcome it, in these cases, the final action is to commit to the lie because of being unable to move past it and change."
       },
-    titles: ["Concept or Idea", "Community value", "Myth", "Theme", "Truth", "Contra-positive", "Lie", "Flaw", "Want", "Need", "Self-revelation", "Fall into Lie"]
+      titles: ["Concept or Idea", "Community value", "Myth", "Theme", "Truth", "Contra-positive", "Lie", "Flaw", "Want", "Need", "Self-revelation", "Fall into Lie"]
 
     },
     actions: {
+
+      handleConcept: (concept) => {
+        setStore({ concept: concept });
+      },
+      handleValue: (value) => {
+        setStore({ value: value });
+      },
+      handleMyth: (myth) => {
+        setStore({ myth: myth });
+      },
+
       syncTokenFromSessionStore: () => {
         const token = sessionStorage.getItem("token");
         if (token && token != "" && token != undefined)

@@ -3,6 +3,9 @@ import Layout from "./views/layout";
 import appContext from "./context/appContext";
 import Dramatic from "./views/dramatic";
 import Home from "./views/home";
+import Dramatic2 from "./views/dramatic2";
+
+
 
 function App() {
   return (
@@ -11,6 +14,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/dramatic" element={<Dramatic />} />
+          <Route path="/dramatic2" element={<Dramatic2 />} />
         </Route>
       </Routes>
     </BrowserRouter>

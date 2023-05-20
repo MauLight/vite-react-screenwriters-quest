@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.12",
     "@react-three/drei": "^9.68.3",
     "@react-three/fiber": "^8.13.0",
     "@types/three": "^0.152.0",

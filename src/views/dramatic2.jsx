@@ -6,13 +6,13 @@ import Lesson from "../components/Lesson"
 import StarsCanvas from "../components/canvas/stars"
 import Myth from "../components/Myth"
 
-function Dramatic() {
+function Dramatic2() {
 
     const { store, actions } = useContext(Context)
 
     return (
         <div>
-            <Hero />
+            <Lesson />
             <div className="px-20">
                 <DramaCard />
             </div>
@@ -21,4 +21,4 @@ function Dramatic() {
     )
 }
 
-export default Dramatic;
+export default Dramatic2;
