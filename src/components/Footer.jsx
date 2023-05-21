@@ -4,7 +4,7 @@ import Tilt from 'react-parallax-tilt';
 
 export default function Footer() {
   return (
-    <div className="grid grid-cols-2 px-20 my-[50px]">
+    <div className="grid grid-cols-2 px-20 my-[300px]">
       <Tilt tiltMaxAngleX={0.5} tiltMaxAngleY={0.5} glareEnable={true} glareMaxOpacity={0.15} glareColor={"black"} glareBorderRadius='30px' >
 
         <div className="p-[50px]">

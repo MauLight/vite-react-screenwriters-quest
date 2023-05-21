@@ -8,11 +8,11 @@ const getState = ({ getStore, getActions, setStore }) => {
       truth: "TRUTH",
       positive: "CONTRA-POSITIVE",
       lie: "LIE",
-      flaw: "Flaw",
-      want: "Want",
-      need: "Need",
-      self: "Self-Revelation",
-      fall: "Fall into Lie",
+      flaw: "FLAW",
+      want: "WANT",
+      need: "NEED",
+      rev: "SELF-REVELATION",
+      fall: "FALL INTO LIE",
       dramatic_basis: {
         concept_idea: {
           def: "In a general sense, what is the source of inspiration behind your need to write? Those images in your mind, sum them up into a phrase.",
@@ -88,6 +88,21 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       handleLie: (lie) => {
         setStore({ lie: lie });
+      },
+      handleFlaw: (flaw) => {
+        setStore({ flaw: flaw });
+      },
+      handleWant: (want) => {
+        setStore({ want: want });
+      },
+      handleNeed: (need) => {
+        setStore({ need: need });
+      },
+      handleSelf: (rev) => {
+        setStore({ rev: rev });
+      },
+      handleObjective: (obj) => {
+        setStore({ obj: obj });
       },
 
       syncTokenFromSessionStore: () => {

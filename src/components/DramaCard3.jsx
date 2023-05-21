@@ -45,7 +45,18 @@ function DramaCard({ title, text, image, example, onChange, position }) {
     )
 }
 
-function DramaCard2({ title, text, image, example, onChange, position }) {
+function WantCard({ title, text, image, example, onChange, position, place01, place02 }) {
+
+    const { store, actions } = useContext(Context);
+    const [desire, setDesire] = useState('')
+    const [goal, setGoal] = useState('')
+
+    useEffect(() => {
+        if (desire !== "" && goal !== "") {
+            let want = `${desire} by achieving ${goal}`
+            actions.handleWant(want)
+        }
+    }, [desire, goal])
 
     return (
         <div className='rounded-[30px] w-[100%] h-[750px] columns-2 flex justify-center items-center'>
@@ -58,14 +69,30 @@ function DramaCard2({ title, text, image, example, onChange, position }) {
                 <h1 className="text-white font-secondary text-6xl mb-5">{title}</h1>
                 <p className="text-white font-tertiary text-3xl">{text}</p>
                 <div className="pr-8">
-                    <Input onChange={onChange} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={title} />
+                    <Input onChange={(e) => setDesire(e.target.value)} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={place01} />
+                    <Input onChange={(e) => setGoal(e.target.value)} className="mt-5 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={place02} />
                 </div>
             </div>
         </div>
     )
 }
 
-function WantCard({ title, text, image, example, onChange, position, place01, place02 }) {
+function SelfCard({ title, text, image, example, onChange, position, climax }) {
+
+    const { store, actions } = useContext(Context);
+    const [psycho, setPsycho] = useState('')
+    const [moral, setMoral] = useState('')
+
+    useEffect(() => {
+        if (psycho !== "" && moral !== "" && climax === "1") {
+            let self_rev = `${psycho} and decides to ${moral}`
+            actions.handleSelf(self_rev)
+        }
+        else if (psycho !== "" && moral !== "" && climax === "2") {
+            let self_rev = `Fails to ${psycho} and decides to ${moral}`
+            actions.handleSelf(self_rev)
+        }
+    }, [psycho, moral])
 
     return (
         <div className='rounded-[30px] w-[100%] h-[750px] columns-2 flex justify-center items-center'>
@@ -78,8 +105,8 @@ function WantCard({ title, text, image, example, onChange, position, place01, pl
                 <h1 className="text-white font-secondary text-6xl mb-5">{title}</h1>
                 <p className="text-white font-tertiary text-3xl">{text}</p>
                 <div className="pr-8">
-                    <Input onChange={onChange} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={place01} />
-                    <Input onChange={onChange} className="mt-5 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={place02} />
+                    <Input onChange={(e) => setPsycho(e.target.value)} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder="Psychological" />
+                    <Input onChange={(e) => setMoral(e.target.value)} className="mt-5 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder='Moral' />
                 </div>
             </div>
         </div>
@@ -92,7 +119,17 @@ const CardWrapper3 = () => {
 
     useEffect(() => {
         console.log(climax)
-    })
+        if (store.rev !== "SELF-REVELATION" && climax === "1") {
+            actions.handleSelf("SELF-REVELATION")
+        }
+        else if (store.rev !== "SELF-REVELATION" && climax === "2") {
+            actions.handleSelf("FALL INTO LIE")
+        }
+        else if (store.rev === "SELF-REVELATION" && climax === "2") {
+            actions.handleSelf("FALL INTO LIE")
+        }
+
+    }, [climax])
 
     const { concept_idea,
         community_value,
@@ -123,7 +160,7 @@ const CardWrapper3 = () => {
                 text={want.def}
                 image={want_img}
                 example={want.example}
-                onChange={(e) => actions.handleWant(e.target.value)}
+                onChange={(e) => actions.handleWant(want_val)}
                 position={"object-bottom"}
                 place01={"Desire"}
                 place02={"Goal"}
@@ -141,34 +178,32 @@ const CardWrapper3 = () => {
                     <Radio value="1" description="Character achieves discovering the need.">
                         <p className="text-white text-tertiary text-3xl">Self-Revelation</p>
                     </Radio>
-                    <Radio value="2" description="Character fails in discovering the need." onChange={(e) => { handleChange }} >
+                    <Radio value="2" description="Character fails in discovering the need.">
                         <p className="text-white text-tertiary text-3xl">Fall-into-Lie</p>
                     </Radio>
                 </Radio.Group>
             </div>
             {
                 climax && climax === "1" ? (
-                    <WantCard
+                    <SelfCard
                         title={store.titles[10]}
                         text={self_revelation.def}
                         image={self_img}
                         example={self_revelation.example}
                         onChange={(e) => actions.handleRev(e.target.value)}
                         position={"object-top"}
-                        place01={"Psychological"}
-                        place02={"Moral"}
+                        climax={climax}
                     />
                 )
                     :
-                    <WantCard
+                    <SelfCard
                         title={store.titles[11]}
                         text={fall_into_lie.def}
                         image={fall_img}
                         example={fall_into_lie.example}
-                        onChange={(e) => actions.handleFall(e.target.value)}
+                        onChange={(e) => actions.handleRev(e.target.value)}
                         position={"object-center"}
-                        place01={"Psychological"}
-                        place02={"Moral"}
+                        climax={climax}
                     />
             }
         </>
