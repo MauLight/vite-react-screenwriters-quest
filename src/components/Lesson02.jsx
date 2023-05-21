@@ -43,7 +43,7 @@ function Lesson02({ number }) {
                     </a>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

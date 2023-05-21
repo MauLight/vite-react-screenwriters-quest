@@ -33,7 +33,7 @@ function DramaCard({ title, text, image, example, onChange, position }) {
                 <h1 className="text-white font-secondary text-6xl mb-5">{title}</h1>
                 <p className="text-white font-tertiary text-3xl">{text}</p>
                 <div className="pr-7">
-                    <Input onChange={onChange} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={title} />
+                    <Input onChange={onChange} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={title} aria-label={title} />
                 </div>
             </div>
             <div className="flex mx-auto">
@@ -69,8 +69,8 @@ function WantCard({ title, text, image, example, onChange, position, place01, pl
                 <h1 className="text-white font-secondary text-6xl mb-5">{title}</h1>
                 <p className="text-white font-tertiary text-3xl">{text}</p>
                 <div className="pr-8">
-                    <Input onChange={(e) => setDesire(e.target.value)} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={place01} />
-                    <Input onChange={(e) => setGoal(e.target.value)} className="mt-5 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={place02} />
+                    <Input onChange={(e) => setDesire(e.target.value)} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={place01} aria-label={place01} />
+                    <Input onChange={(e) => setGoal(e.target.value)} className="mt-5 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={place02} aria-label={place02} />
                 </div>
             </div>
         </div>
@@ -105,8 +105,8 @@ function SelfCard({ title, text, image, example, onChange, position, climax }) {
                 <h1 className="text-white font-secondary text-6xl mb-5">{title}</h1>
                 <p className="text-white font-tertiary text-3xl">{text}</p>
                 <div className="pr-8">
-                    <Input onChange={(e) => setPsycho(e.target.value)} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder="Psychological" />
-                    <Input onChange={(e) => setMoral(e.target.value)} className="mt-5 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder='Moral' />
+                    <Input onChange={(e) => setPsycho(e.target.value)} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder="Psychological" aria-label="Psychological" />
+                    <Input onChange={(e) => setMoral(e.target.value)} className="mt-5 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder='Moral' aria-label="Moral" />
                 </div>
             </div>
         </div>
@@ -211,4 +211,4 @@ const CardWrapper3 = () => {
 
 }
 
-export default DramaticWrapper(CardWrapper3, "Myth"); 
+export default DramaticWrapper(CardWrapper3, "Myth");
