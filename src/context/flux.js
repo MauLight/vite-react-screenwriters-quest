@@ -4,6 +4,10 @@ const getState = ({ getStore, getActions, setStore }) => {
       token: null,
       concept: "Idea or Concept",
       value: "Community Value",
+      theme: "THEME",
+      truth: "TRUTH",
+      positive: "CONTRA-POSITIVE",
+      lie: "LIE",
       dramatic_basis: {
         concept_idea: {
           def: "In a general sense, what is the source of inspiration behind your need to write? Those images in your mind, sum them up into a phrase.",
@@ -52,6 +56,18 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       handleMyth: (myth) => {
         setStore({ myth: myth });
+      },
+      handleTheme: (theme) => {
+        setStore({ theme: theme });
+      },
+      handleTruth: (truth) => {
+        setStore({ truth: truth });
+      },
+      handlePositive: (positive) => {
+        setStore({ positive: positive });
+      },
+      handleLie: (lie) => {
+        setStore({ lie: lie });
       },
 
       syncTokenFromSessionStore: () => {
