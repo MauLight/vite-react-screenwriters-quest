@@ -57,7 +57,7 @@ const Nav = () => {
                                         <a href="/dramatic2">Dramatic basis of story</a>
                                     </li>
                                     <li className="border-gray-400 my-8 uppercase">
-                                        <a href="/">Something</a>
+                                        <a href="/dramatic3">Something</a>
                                     </li>
                                 </ul>
                             </Popover.Content>

@@ -1,7 +1,7 @@
 import Tilt from 'react-parallax-tilt';
 import StarsCanvas from '../components/canvas/stars';
 
-export const TiltWrapper = (Component, idName) =>
+export const TiltWrapper = (Component, idName, number) =>
     function HOC() {
         return (
             <section
@@ -9,7 +9,7 @@ export const TiltWrapper = (Component, idName) =>
                 id={idName}
             >
                 <Tilt tiltMaxAngleX={0.5} tiltMaxAngleY={0.5} glareEnable={true} glareMaxOpacity={0.15} glareColor={"black"} glareBorderRadius='30px' >
-                    <Component />
+                    <Component number={number} />
                 </Tilt>
             </section>
         );

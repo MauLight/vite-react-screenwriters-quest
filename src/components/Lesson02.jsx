@@ -1,17 +1,17 @@
 import { Button } from '@nextui-org/react';
 import { TiltWrapper } from '../hoc/SectionWrapper';
-import lesson from '../img/lesson.png'
+import lesson02 from '../img/lesson02.png'
 
 
-function Lesson() {
+function Lesson02({ number }) {
     return (
         <div className='rounded-[30px] w-[100%] h-[750px]'>
             <div className='rounded-[30px]  w-[100%] h-[750px]'>
-                <img className='rounded-[30px]  w-[100%] h-[750px] object-cover object-top' src={lesson} />
+                <img className='rounded-[30px]  w-[100%] h-[750px] object-cover object-top' src={lesson02} />
             </div>
             <div className="inner">
                 <div className="absolute top-[55%] left-[86%] tranlate-x-[-25%] translate-y-[-200%]">
-                    <h1 className='text-black font-secondary text-8xl'>01</h1>
+                    <h1 className='text-black font-secondary text-8xl'>{number}</h1>
 
                 </div>
                 <div className="absolute top-[55%] left-[56%] tranlate-x-[-25%] translate-y-[-150%]">
@@ -33,4 +33,4 @@ function Lesson() {
     )
 }
 
-export default TiltWrapper(Lesson, "Lesson");
+export default TiltWrapper(Lesson02, "Lesson_02", "02");

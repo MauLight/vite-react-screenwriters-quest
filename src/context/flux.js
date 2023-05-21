@@ -8,6 +8,11 @@ const getState = ({ getStore, getActions, setStore }) => {
       truth: "TRUTH",
       positive: "CONTRA-POSITIVE",
       lie: "LIE",
+      flaw: "Flaw",
+      want: "Want",
+      need: "Need",
+      self: "Self-Revelation",
+      fall: "Fall into Lie",
       dramatic_basis: {
         concept_idea: {
           def: "In a general sense, what is the source of inspiration behind your need to write? Those images in your mind, sum them up into a phrase.",
@@ -37,11 +42,26 @@ const getState = ({ getStore, getActions, setStore }) => {
           def: "The polar opposite to the truth statement, the lie is the worldview of the protagonist at the beginning of the story, and it builds tension against your truth, given by the distance that you create between the two statements.",
           example: "It is because you're important that you're destined to do something important."
         },
-        flaw: "The flaw of the protagonist is the primary reason for them being in their original state at the beginning of the story and this is because of the lie they believe. In some cases, you'll find that the flaw of the protagonist is anchored in what is called a wound/ghost dynamic.",
-        want: "The representation of a larger, abstract desire, manifested as a concrete goal. Comprised of desire and goal. Often it is based in the lie, because the character wants something according to their flawed view on life.",
-        need: "The need of the protagonist is, in simple terms, to overcome a flaw inherent in their personality. You can think of a story as an ordeal that the protagonist needs to live through to fix this flawed trait that keeps them living in a lie-driven world.",
-        self_revelation: "The self-revelation is the moment of change for the protagonist, and it's comprised of two distinctive parts; a psychological revelation or insight about who the protagonist truly is and a moral decision that becomes the final action of the protagonist.",
-        fall_into_lie: "Sometimes, the power of the lie is too much for the protagonist to overcome it, in these cases, the final action is to commit to the lie because of being unable to move past it and change."
+        flaw: {
+          def: "The flaw of the protagonist is the primary reason for them being in their original state at the beginning of the story and this is because of the lie they believe. In some cases, you'll find that the flaw of the protagonist is anchored in what is called a wound/ghost dynamic.",
+          example: ""
+        },
+        want: {
+          def: "The representation of a larger, abstract desire, manifested as a concrete goal. Comprised of desire and goal. Often it is based in the lie, because the character wants something according to their flawed view on life.",
+          example: ""
+        },
+        need: {
+          def: "The need of the protagonist is, in simple terms, to overcome a flaw inherent in their personality. You can think of a story as an ordeal that the protagonist needs to live through to fix this flawed trait that keeps them living in a lie-driven world.",
+          example: ""
+        },
+        self_revelation: {
+          def: "The self-revelation is the moment of change for the protagonist, and it's comprised of two distinctive parts; a psychological revelation or insight about who the protagonist truly is and a moral decision that becomes the final action of the protagonist.",
+          example: ""
+        },
+        fall_into_lie: {
+          def: "Sometimes, the power of the lie is too much for the protagonist to overcome it, in these cases, the final action is to commit to the lie because of being unable to move past it and change.",
+          example: ""
+        }
       },
       titles: ["Concept or Idea", "Community value", "Myth", "Theme", "Truth", "Contra-positive", "Lie", "Flaw", "Want", "Need", "Self-revelation", "Fall into Lie"]
 

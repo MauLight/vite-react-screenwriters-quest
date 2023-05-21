@@ -1,17 +1,14 @@
-import { useContext } from "react"
-import { Context } from "../context/appContext"
 import Lesson from "../components/Lesson01"
 import DramaCard2 from "../components/DramaCard2"
 import Theme from "../components/Theme"
 import Conflict from "../components/conflict"
+import Lesson02 from "../components/Lesson02"
 
-function Dramatic2() {
-
-    const { store, actions } = useContext(Context)
+function Dramatic3() {
 
     return (
         <div>
-            <Lesson />
+            <Lesson02 />
             <Theme />
             <div className="px-20">
                 <DramaCard2 />
@@ -21,4 +18,4 @@ function Dramatic2() {
     )
 }
 
-export default Dramatic2;
+export default Dramatic3;
