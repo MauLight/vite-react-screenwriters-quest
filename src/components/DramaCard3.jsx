@@ -44,6 +44,7 @@ function DramaCard({ title, text, image, example, onChange, position }) {
         </div>
     )
 }
+
 function DramaCard2({ title, text, image, example, onChange, position }) {
 
     return (
@@ -58,6 +59,27 @@ function DramaCard2({ title, text, image, example, onChange, position }) {
                 <p className="text-white font-tertiary text-3xl">{text}</p>
                 <div className="pr-8">
                     <Input onChange={onChange} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={title} />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function WantCard({ title, text, image, example, onChange, position, place01, place02 }) {
+
+    return (
+        <div className='rounded-[30px] w-[100%] h-[750px] columns-2 flex justify-center items-center'>
+            <div className="flex mx-auto">
+                <Tilt tiltMaxAngleX={1} tiltMaxAngleY={1} glareEnable={true} glareMaxOpacity={0.55} glareColor={"white"} glareBorderRadius='30px' >
+                    <ImageHolder img={image} title={title} example={example} position={position} />
+                </Tilt>
+            </div>
+            <div className="text w-[50%] mx-auto px-[80px]">
+                <h1 className="text-white font-secondary text-6xl mb-5">{title}</h1>
+                <p className="text-white font-tertiary text-3xl">{text}</p>
+                <div className="pr-8">
+                    <Input onChange={onChange} className="mt-10 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={place01} />
+                    <Input onChange={onChange} className="mt-5 w-[100%]" type="text" fullWidth clearable status="default" size="xl" rounded color="secondary" placeholder={place02} />
                 </div>
             </div>
         </div>
@@ -94,15 +116,17 @@ const CardWrapper3 = () => {
                 image={flaw_img}
                 example={flaw.example}
                 onChange={(e) => actions.handleFlaw(e.target.value)}
-                position={"object-top"}
+                position={"object-canter"}
             />
-            <DramaCard2
+            <WantCard
                 title={store.titles[8]}
                 text={want.def}
                 image={want_img}
                 example={want.example}
                 onChange={(e) => actions.handleWant(e.target.value)}
                 position={"object-bottom"}
+                place01={"Desire"}
+                place02={"Goal"}
             />
             <DramaCard
                 title={store.titles[9]}
@@ -124,23 +148,27 @@ const CardWrapper3 = () => {
             </div>
             {
                 climax && climax === "1" ? (
-                    <DramaCard2
+                    <WantCard
                         title={store.titles[10]}
                         text={self_revelation.def}
                         image={self_img}
                         example={self_revelation.example}
                         onChange={(e) => actions.handleRev(e.target.value)}
                         position={"object-top"}
+                        place01={"Psychological"}
+                        place02={"Moral"}
                     />
                 )
                     :
-                    <DramaCard2
+                    <WantCard
                         title={store.titles[11]}
                         text={fall_into_lie.def}
                         image={fall_img}
                         example={fall_into_lie.example}
                         onChange={(e) => actions.handleFall(e.target.value)}
                         position={"object-center"}
+                        place01={"Psychological"}
+                        place02={"Moral"}
                     />
             }
         </>

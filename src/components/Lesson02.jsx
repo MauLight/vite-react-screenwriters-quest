@@ -1,5 +1,6 @@
 import { Button } from '@nextui-org/react';
 import { TiltWrapper } from '../hoc/SectionWrapper';
+import { TypeAnimation } from 'react-type-animation'
 import lesson02 from '../img/lesson02.png'
 
 
@@ -19,7 +20,20 @@ function Lesson02({ number }) {
 
                 </div>
                 <div className="absolute top-[65%] left-[71%] tranlate-x-[-50%] translate-y-[-110%]">
-                    <h1 className='text-black font-secondary text-8xl'>a <b>STORY</b></h1>
+                    <h1 className='text-black font-secondary text-8xl'>{"a "}
+                        <b>
+                            <TypeAnimation sequence={[
+                                'STORY', 3000,
+                                ' STORY', 3000,
+                                ' STORY', 3000,
+                            ]}
+                                speed={50}
+                                className='text-accent'
+                                wrapper='span'
+                                repeat={Infinity}
+                            />
+                        </b>
+                    </h1>
                 </div>
                 <div className="absolute top-[70%] left-[74%]">
                     <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'>

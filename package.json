@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0",
     "react-parallax-tilt": "^1.7.140",
     "react-router-dom": "^6.11.2",
+    "react-type-animation": "^3.0.1",
     "three": "^0.152.2"
   },
   "devDependencies": {

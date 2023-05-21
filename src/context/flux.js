@@ -44,15 +44,15 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
         flaw: {
           def: "The flaw of the protagonist is the primary reason for them being in their original state at the beginning of the story and this is because of the lie they believe. In some cases, you'll find that the flaw of the protagonist is anchored in what is called a wound/ghost dynamic.",
-          example: ""
+          example: "Unknowingly violent."
         },
         want: {
-          def: "The representation of a larger, abstract desire, manifested as a concrete goal. Comprised of desire and goal. Often it is based in the lie, because the character wants something according to their flawed view on life.",
-          example: ""
+          def: "The representation of a larger, abstract desire, manifested as a concrete goal. Based in the lie, because the character wants something according to their flawed view on life.",
+          example: "To survive by escaping the war."
         },
         need: {
           def: "The need of the protagonist is, in simple terms, to overcome a flaw inherent in their personality. You can think of a story as an ordeal that the protagonist needs to live through to fix this flawed trait that keeps them living in a lie-driven world.",
-          example: ""
+          example: "To understand that confidence is a leap of faith."
         },
         self_revelation: {
           def: "The self-revelation is the moment of change for the protagonist, and it's comprised of two distinctive parts; a psychological revelation or insight about who the protagonist truly is and a moral decision that becomes the final action of the protagonist.",

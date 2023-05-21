@@ -1,5 +1,6 @@
 import { Button } from '@nextui-org/react';
 import { TiltWrapper } from '../hoc/SectionWrapper';
+import { TypeAnimation } from 'react-type-animation'
 import hero from '../img/hero.png'
 
 
@@ -15,7 +16,18 @@ function Hero() {
 
                 </div>
                 <div className="absolute top-[65%] left-[70%] tranlate-x-[-50%] translate-y-[-60%]">
-                    <h1 className='text-white font-secondary text-8xl'>a <b>MYTH</b></h1>
+                    <h1 className='text-white font-secondary text-8xl'>{"a "}<b>
+                            <TypeAnimation sequence={[
+                                'MYTH', 3000,
+                                ' MYTH', 3000,
+                                ' MYTH', 3000,
+                            ]}
+                                speed={50}
+                                className='text-accent'
+                                wrapper='span'
+                                repeat={Infinity}
+                            />
+                        </b></h1>
                 </div>
                 <div className="absolute top-[75%] left-[52%] tranlate-x-[-50%] translate-y-[-80%]">
                     <p className='text-white font-tertiary text-3xl' >Move from a single idea into the <b>MYTH</b> of your story.</p>
