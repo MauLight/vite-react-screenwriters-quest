@@ -17,10 +17,22 @@ const getState = ({ getStore, getActions, setStore }) => {
           def: "Discourse created by a series of symbols that recursively signify and become its own symbol system, a global symbol.",
           example: ""
         },
-        theme: "The symbolic argument between a posited truth and a lie. Generally speaking, theme is a uniform idea or subject, explored via recurring patterns and expanded through comparisons and contrast.",
-        truth: "It is the side of the theme that represents the revelation the character will have about the world because of facing the story. It's called the truth because it is actually an insight into what you, as an author, think about the theme.",
-        contra_positive: "The consequence of not following the truth.",
-        lie: "The polar opposite to the truth statement, the lie is the initial context of affairs. The worldview of the protagonist at the beginning of the story, and it builds tension against your truth, given by the distance that you create between them.",
+        theme: {
+          def: "The symbolic argument between a posited truth and a lie. Generally speaking, theme is a uniform idea or subject, explored via recurring patterns and expanded through comparisons and contrast.",
+          example: "War, the purpose of life, or even colliding statements as fear vs freedom can be powerful themes."
+        },
+        truth: {
+          def: "It is the side of the theme that represents the revelation the character will have about the world because of facing the story. It's called the truth because it is actually an insight into what you, as an author, think about the theme.",
+          example: "Even the smallest of persons can change the curse of the future."
+        },
+        contra_positive: {
+          def: "The consequence of not following the truth. Conceptually, what would happen to the character if they don't achieve the truth, or what happens when they don't.",
+          example: "Represing your emotions leads to losing yourself."
+        },
+        lie: {
+          def: "The polar opposite to the truth statement, the lie is the worldview of the protagonist at the beginning of the story, and it builds tension against your truth, given by the distance that you create between the two statements.",
+          example: "It is because you're important that you're destined to do something important."
+        },
         flaw: "The flaw of the protagonist is the primary reason for them being in their original state at the beginning of the story and this is because of the lie they believe. In some cases, you'll find that the flaw of the protagonist is anchored in what is called a wound/ghost dynamic.",
         want: "The representation of a larger, abstract desire, manifested as a concrete goal. Comprised of desire and goal. Often it is based in the lie, because the character wants something according to their flawed view on life.",
         need: "The need of the protagonist is, in simple terms, to overcome a flaw inherent in their personality. You can think of a story as an ordeal that the protagonist needs to live through to fix this flawed trait that keeps them living in a lie-driven world.",

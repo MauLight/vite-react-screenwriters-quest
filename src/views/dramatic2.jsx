@@ -1,10 +1,9 @@
 import { useContext } from "react"
 import { Context } from "../context/appContext"
-import Hero from "../components/Hero"
-import DramaCard from "../components/DramaCard"
 import Lesson from "../components/Lesson"
-import StarsCanvas from "../components/canvas/stars"
 import Myth from "../components/Myth"
+import DramaCard2 from "../components/DramaCard2"
+import Theme from "../components/Theme"
 
 function Dramatic2() {
 
@@ -13,8 +12,9 @@ function Dramatic2() {
     return (
         <div>
             <Lesson />
+            <Theme />
             <div className="px-20">
-                <DramaCard />
+                <DramaCard2 />
             </div>
             <Myth />
         </div>
