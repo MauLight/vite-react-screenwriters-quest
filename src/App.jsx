@@ -8,6 +8,7 @@ import Dramatic3 from "./views/dramatic3";
 import Dramatic4 from "./views/dramatic4";
 import Dramatic5 from "./views/dramatic5";
 import Dramatic6 from "./views/dramatic6";
+import Dramatic7 from "./views/dramatic7";
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/dramatic4" element={<Dramatic4 />} />
           <Route path="/dramatic5" element={<Dramatic5 />} />
           <Route path="/dramatic6" element={<Dramatic6 />} />
+          <Route path="/dramatic7" element={<Dramatic7 />} />
         </Route>
       </Routes>
     </BrowserRouter>

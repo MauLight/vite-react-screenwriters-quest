@@ -2,7 +2,7 @@ import Battle from "../components/Battle";
 import DramaCard5 from "../components/DramaCard5";
 import Lesson04 from "../components/Lesson04";
 
-function Dramatic5() {
+function Dramatic6() {
 
     return (
         <div>
@@ -15,4 +15,4 @@ function Dramatic5() {
     )
 }
 
-export default Dramatic5;
+export default Dramatic6;

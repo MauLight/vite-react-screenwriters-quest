@@ -18,6 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       changed: "CHANGED-OBJECTIVE",
       battle: "BATTLE",
       death: "DEATH",
+      tbattle: "",
       dramatic_basis: {
         concept_idea: {
           def: "In a general sense, what is the source of inspiration behind your need to write? Those images in your mind, sum them up into a phrase.",
@@ -150,6 +151,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       handleDeath: (death) => {
         setStore({ death: death });
+      },
+      handleTheBattle: (tbattle) => {
+        setStore({ tbattle: tbattle });
       },
 
       login: async (email, password) => {
