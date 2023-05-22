@@ -51,19 +51,22 @@ const Nav = () => {
                             <Popover.Content>
                                 <ul className='px-5'>
                                     <li className="border-gray-400 my-8 uppercase">
-                                        <a href="/dramatic">Lesson 01</a>
+                                        <a href="/dramatic">The Myth</a>
                                     </li>
                                     <li className="border-gray-400 my-8 uppercase">
-                                        <a href="/dramatic2">Lesson 02</a>
+                                        <a href="/dramatic2">Lesson 01</a>
                                     </li>
                                     <li className="border-gray-400 my-8 uppercase">
-                                        <a href="/dramatic3">Lesson 03</a>
+                                        <a href="/dramatic3">Lesson 02</a>
                                     </li>
                                     <li className="border-gray-400 my-8 uppercase">
                                         <a href="/dramatic4">Character Logline</a>
                                     </li>
                                     <li className="border-gray-400 my-8 uppercase">
-                                        <a href="/dramatic5">Lesson 04</a>
+                                        <a href="/dramatic5">Lesson 03</a>
+                                    </li>
+                                    <li className="border-gray-400 my-8 uppercase">
+                                        <a href="/dramatic6">Lesson 04</a>
                                     </li>
                                 </ul>
                             </Popover.Content>

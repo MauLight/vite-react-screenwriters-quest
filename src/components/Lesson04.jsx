@@ -1,14 +1,14 @@
 import { Button } from '@nextui-org/react';
 import { TiltWrapper } from '../hoc/SectionWrapper';
 import { TypeAnimation } from 'react-type-animation'
-import lesson01 from '../img/lesson.png'
+import lesson04 from '../img/lesson04.png'
 
 
-function Lesson({number}) {
+function Lesson04({ number }) {
     return (
         <div className='rounded-[30px] w-[100%] h-[750px]'>
             <div className='rounded-[30px]  w-[100%] h-[750px]'>
-                <img className='rounded-[30px]  w-[100%] h-[750px] object-cover object-top' src={lesson01} />
+                <img className='rounded-[30px]  w-[100%] h-[750px] object-cover object-top' src={lesson04} />
             </div>
             <div className="inner">
                 <div className="absolute top-[55%] left-[86%] tranlate-x-[-25%] translate-y-[-200%]">
@@ -20,7 +20,7 @@ function Lesson({number}) {
 
                 </div>
                 <div className="absolute top-[65%] left-[71%] tranlate-x-[-50%] translate-y-[-110%]">
-                <h1 className='text-black font-secondary text-8xl'>{"a "}
+                    <h1 className='text-black font-secondary text-8xl'>{"a "}
                         <b>
                             <TypeAnimation sequence={[
                                 'STORY', 3000,
@@ -47,4 +47,4 @@ function Lesson({number}) {
     )
 }
 
-export default TiltWrapper(Lesson, "Lesson_01", "01");
+export default TiltWrapper(Lesson04, "Lesson_04", "04");

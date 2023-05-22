@@ -42,6 +42,7 @@ function DramaCard({ title, text, image, example, onChange, position }) {
         </div>
     )
 }
+
 function DramaCard2({ title, text, image, example, onChange, position }) {
 
     const { actions } = useContext(Context);
@@ -101,7 +102,7 @@ const CardWrapper4 = () => {
                 image={opposition_img}
                 example={opposition.example}
                 onChange={(e) => actions.handleOpposition(e.target.value)}
-                position={"object-canter"}
+                position={"object-center"}
             />
             <DramaCard
                 title={store.titles[14]}

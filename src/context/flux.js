@@ -15,6 +15,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       antagonism: "ANTAGONISM",
       opposition: "OPPOSITION",
       half: "HALF-TRUTH",
+      changed: "CHANGED-OBJECTIVE",
+      battle: "BATTLE",
+      death: "DEATH",
       dramatic_basis: {
         concept_idea: {
           def: "In a general sense, what is the source of inspiration behind your need to write? Those images in your mind, sum them up into a phrase.",
@@ -75,9 +78,21 @@ const getState = ({ getStore, getActions, setStore }) => {
         half_truth: {
           def: "Either because of a defeat or a victory, the protagonist manages to see what they're doing wrong for the first time in the story, the flaw in their personality.",
           example: "I've been blind to the transgressions against myself."
-        }
+        },
+        changed_objective: {
+          def: "A narrower version of the goal focused by the understanding of the flaw and the antagonistic forces working against the protagonist.",
+          example: ""
+        },
+        battle: {
+          def: "Incresingly desperate decisions pushing away from the flaw become major victories from the protagonist against the antagonistic forces.",
+          example: ""
+        },
+        death: {
+          def: "A catastrophe and/or a major sacrifice pushes the protagonist to the edge, just before the last confrontation, a perspective about the price of victory.",
+          example: ""
+        },
       },
-      titles: ["Concept or Idea", "Community value", "Myth", "Theme", "Truth", "Contra-positive", "Lie", "Flaw", "Want", "Need", "Self-revelation", "Fall into Lie", "Antagonism", "Opposition", "Half-Truth"]
+      titles: ["Concept or Idea", "Community value", "Myth", "Theme", "Truth", "Contra-positive", "Lie", "Flaw", "Want", "Need", "Self-revelation", "Fall into Lie", "Antagonism", "Opposition", "Half-Truth", "Changed objective", "Battle", "Death"]
 
     },
     actions: {
@@ -126,6 +141,15 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       handleHalf: (half) => {
         setStore({ half: half });
+      },
+      handleChanged: (changed) => {
+        setStore({ changed: changed });
+      },
+      handleBattle: (battle) => {
+        setStore({ battle: battle });
+      },
+      handleDeath: (death) => {
+        setStore({ death: death });
       },
 
       login: async (email, password) => {
