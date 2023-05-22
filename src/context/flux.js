@@ -12,7 +12,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       want: "WANT",
       need: "NEED",
       rev: "SELF-REVELATION",
-      fall: "FALL INTO LIE",
+      antagonism: "ANTAGONISM",
+      opposition: "OPPOSITION",
+      half: "HALF-TRUTH",
       dramatic_basis: {
         concept_idea: {
           def: "In a general sense, what is the source of inspiration behind your need to write? Those images in your mind, sum them up into a phrase.",
@@ -61,9 +63,21 @@ const getState = ({ getStore, getActions, setStore }) => {
         fall_into_lie: {
           def: "Sometimes, the power of the lie is too much for the protagonist to overcome it, in these cases, the final action is to commit to the lie because of being unable to move past it and change.",
           example: ""
+        },
+        antagonism: {
+          def: "The setting for the conflict it is based in the protagonist's lie, manifested as the source of opposition to their want.",
+          example: "A world in which being special means being better than the rest."
+        },
+        opposition: {
+          def: "The unified forces working against the protagonist’s goal, rooted in antagonism and pushing against them.",
+          example: "An enemy looking for the same goal, allies worried for your life and gatekeepers testing your resolve."
+        },
+        half_truth: {
+          def: "Either because of a defeat or a victory, the protagonist manages to see what they're doing wrong for the first time in the story, the flaw in their personality.",
+          example: "I've been blind to the transgressions against myself."
         }
       },
-      titles: ["Concept or Idea", "Community value", "Myth", "Theme", "Truth", "Contra-positive", "Lie", "Flaw", "Want", "Need", "Self-revelation", "Fall into Lie"]
+      titles: ["Concept or Idea", "Community value", "Myth", "Theme", "Truth", "Contra-positive", "Lie", "Flaw", "Want", "Need", "Self-revelation", "Fall into Lie", "Antagonism", "Opposition", "Half-Truth"]
 
     },
     actions: {
@@ -104,11 +118,14 @@ const getState = ({ getStore, getActions, setStore }) => {
       handleObjective: (obj) => {
         setStore({ obj: obj });
       },
-
-      syncTokenFromSessionStore: () => {
-        const token = sessionStorage.getItem("token");
-        if (token && token != "" && token != undefined)
-          setStore({ token: token });
+      handleAntagonism: (antagonism) => {
+        setStore({ antagonism: antagonism });
+      },
+      handleOpposition: (opposition) => {
+        setStore({ opposition: opposition });
+      },
+      handleHalf: (half) => {
+        setStore({ half: half });
       },
 
       login: async (email, password) => {
@@ -147,21 +164,6 @@ const getState = ({ getStore, getActions, setStore }) => {
         } catch (error) {
           console.error("There was an error in your request");
         }
-      },
-
-      logout: () => {
-        sessionStorage.removeItem("token");
-        console.log("logged out!");
-        setStore({ token: null });
-      },
-
-      setScriptId: (id) => {
-        setStore({ scriptId: id });
-        console.log(id);
-      },
-
-      hasScripts: () => {
-        setStore({ hasScripts: false });
       },
 
       getMessage: async () => {

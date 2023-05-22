@@ -16,8 +16,8 @@ function Ch_Logline({ number }) {
                 <img className='rounded-[30px]  w-[100%] h-[750px] object-cover object-top' src={ch_logline} />
             </div>
             <div className="inner">
-                <div className="absolute top-[90%] left-[26%] tranlate-x-[-50%] translate-y-[-110%]">
-                    <h1 className='text-white font-secondary text-6xl pl-32 mb-20'>
+                <div className="absolute top-[65%] left-[34%] tranlate-x-[-50%] translate-y-[-110%]">
+                    <h1 className='text-white font-secondary text-6xl mx-auto mb-10'>
                         <b>
                             <TypeAnimation sequence={[
                                 'CHARACTER LOGLINE', 3000,
@@ -31,22 +31,28 @@ function Ch_Logline({ number }) {
                             />
                         </b>
                     </h1>
-                    <div className='flex text-white font-tertiary text-3xl'>
-                        <Text className='mx-3 text-white' size={30}>{"After "}</Text>
-                        <Text size={30} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.positive}</Text>
-                        <Text className='mx-3 text-white' size={30}>{" a character who has "}</Text>
-                        <Text size={30} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.flaw}</Text>
-                        <Text className='mx-3 text-white' size={30}>{" because of "}</Text>
-                        <Text size={30} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.lie}</Text>
-
-                    </div>
-                    <div className='flex text-white font-tertiary text-3xl pl-[50px]'>
-                        <Text className='mx-3 text-white' size={30}>{"wants to "}</Text>
-                        <Text size={30} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.want}</Text>
-                        <Text className='mx-3 text-white' size={30}>{" and needs to "}</Text>
-                        <Text size={30} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.need}</Text>
-                        <Text className='mx-3 text-white' size={30}>{" to "}</Text>
-                        <Text size={30} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.rev}</Text>
+                </div>
+                <div className="absolute top-[100%] left-[27%] tranlate-x-[-50%] translate-y-[-110%]">
+                    <div className="flex flex-col justify-center">
+                        <div className='flex text-white font-tertiary text-3xl'>
+                            <Text className='mx-3 text-white' size={28}>{"After "}</Text>
+                            <Text size={28} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.positive}</Text>
+                            <Text className='mx-3 text-white' size={28}>{" a character who has "}</Text>
+                            <Text size={28} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.flaw}</Text>
+                            <Text className='mx-3 text-white' size={28}>{" because of "}</Text>
+                            <Text size={28} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.lie}</Text>
+                        </div>
+                        <div className='flex text-white font-tertiary text-3xl pl-[50px]'>
+                            <Text className='mx-3 text-white' size={28}>{"wants to "}</Text>
+                            <Text size={28} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.want}</Text>
+                            <Text className='mx-3 text-white' size={28}>{" and needs to "}</Text>
+                            <Text size={28} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.need}</Text>
+                            <Text className='mx-3 text-white' size={28}>{" to "}</Text>
+                            <Text size={28} css={{ textGradient: "45deg, $blue600 -20%, $pink600 50%" }}>{store.rev}</Text>
+                        </div>
+                        <div className='mt-10 pl-5'>
+                            <textarea id="Message" className="rounded-full h-[100px] w-[100%] mx-auto border-solid border-2 border-gray-300"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
