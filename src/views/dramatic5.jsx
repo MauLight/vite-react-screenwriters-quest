@@ -1,6 +1,6 @@
 import DramaCard4 from "../components/DramaCard4";
 import Lesson03 from "../components/Lesson03";
-import Opposition from "../components/Opposition";
+import Opposition from "../components/Resistance";
 
 function Dramatic5() {
 

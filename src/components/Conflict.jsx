@@ -9,22 +9,6 @@ function Conflict() {
 
     const { store, actions } = useContext(Context);
 
-    console.log(store.concept)
-
-    const { concept_idea,
-        community_value,
-        myth,
-        theme,
-        truth,
-        contra_positive,
-        lie,
-        flaw,
-        want,
-        need,
-        self_revelation,
-        fall_into_lie
-    } = store.dramatic_basis
-
     return (
         <div className='rounded-[30px] w-[100%] h-[750px]'>
             <div className='rounded-[30px]  w-[100%] h-[750px]'>
@@ -59,7 +43,7 @@ function Conflict() {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

@@ -81,15 +81,15 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
         changed_objective: {
           def: "A narrower version of the goal focused by the understanding of the flaw and the antagonistic forces working against the protagonist.",
-          example: ""
+          example: "To do what it takes to protect the lives of the ones I love, even if it means going beyond the law."
         },
         battle: {
           def: "Incresingly desperate decisions pushing away from the flaw become major victories from the protagonist against the antagonistic forces.",
-          example: ""
+          example: "To uphold the law and what's right even at the face of losing everything."
         },
         death: {
           def: "A catastrophe and/or a major sacrifice pushes the protagonist to the edge, just before the last confrontation, a perspective about the price of victory.",
-          example: ""
+          example: "Letting go of everything that connects you with a past you want to let go."
         },
       },
       titles: ["Concept or Idea", "Community value", "Myth", "Theme", "Truth", "Contra-positive", "Lie", "Flaw", "Want", "Need", "Self-revelation", "Fall into Lie", "Antagonism", "Opposition", "Half-Truth", "Changed objective", "Battle", "Death"]

@@ -5,7 +5,7 @@ import { Context } from '../context/appContext';
 import { Button, Input, Text } from '@nextui-org/react';
 
 
-function Conflict() {
+function Resistance() {
 
     const { store, actions } = useContext(Context);
 
@@ -52,4 +52,4 @@ function Conflict() {
     )
 }
 
-export default TiltWrapper(Conflict, "Conflict");
+export default TiltWrapper(Resistance, "Resistance");

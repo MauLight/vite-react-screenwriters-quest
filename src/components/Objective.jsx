@@ -5,11 +5,9 @@ import { Context } from '../context/appContext';
 import { Button, Input, Text } from '@nextui-org/react';
 
 
-function Conflict() {
+function Objective() {
 
     const { store, actions } = useContext(Context);
-
-    console.log(store.concept)
 
     return (
         <div className='rounded-[30px] w-[100%] h-[750px]'>
@@ -49,4 +47,4 @@ function Conflict() {
     )
 }
 
-export default TiltWrapper(Conflict, "Conflict");
+export default TiltWrapper(Objective, "Objective");
