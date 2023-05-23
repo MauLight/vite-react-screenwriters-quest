@@ -6,8 +6,6 @@ import { Popover, Text, Button } from '@nextui-org/react';
 
 const Nav = () => {
 
-    const [isOpen, setOpen] = useState(false);
-
     const style = {
         width: '310px',
         paddingBottom: '10px',
@@ -68,6 +66,9 @@ const Nav = () => {
                                     <li className="border-gray-400 my-8 uppercase">
                                         <a href="/dramatic6">Lesson 04</a>
                                     </li>
+                                    <li className="border-gray-400 my-8 uppercase">
+                                        <a href="/dramatic7">Functional logline</a>
+                                    </li>
                                 </ul>
                             </Popover.Content>
                         </Popover>
@@ -75,7 +76,7 @@ const Nav = () => {
                 </section>
             </nav>
 
-        </div >
+        </div>
     )
 };
 
