@@ -45,7 +45,7 @@ function Home_Section3() {
                 </Tilt>
             </div>
             <div className="mx-auto w-[100%]">
-                <Tilt tiltMaxAngleX={0.5} tiltMaxAngleY={0.5} glareEnable={true} glareMaxOpacity={0.15} glareColor={"black"} glareBorderRadius='30px' >
+                <Tilt tiltMaxAngleX={0.5} tiltMaxAngleY={0.5} glareEnable={true} glareMaxOpacity={0.15} glareColor={"#f205E2"} glareBorderRadius='30px' glarePosition="all" >
                     <div className="rounded-[40px] border border-solid border-4 border-black w-[100%]">
                         <Text className="font-secondary px-10 pt-[45px]" size={30} weight="bold">{"The Quest will suit you if you have:"}</Text>
                         <div className="flex gap-x-48 pb-[45px] mt-5">
@@ -76,7 +76,7 @@ function Home_Section3() {
                     </div>
                 </Tilt>
 
-                <Tilt tiltMaxAngleX={0.5} tiltMaxAngleY={0.5} glareEnable={true} glareMaxOpacity={0.15} glareColor={"black"} glareBorderRadius='30px' >
+                <Tilt tiltMaxAngleX={0.5} tiltMaxAngleY={0.5} glareEnable={true} glareMaxOpacity={0.15} glareColor={"#f205E2"} glareBorderRadius='30px' glarePosition="all" >
                     <div className="rounded-[40px] border border-solid border-4 border-black w-[100%] mt-[58px]">
                         <Text className="font-secondary px-10 pt-[45px]" size={30} weight="bold">{"But you also struggle with:"}</Text>
                         <div className="flex gap-x-48 pb-[45px] mt-5">
