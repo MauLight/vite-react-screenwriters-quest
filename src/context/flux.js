@@ -10,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       Home_Section1_Text3: "But that’s not all because you will also learn how to overcome any fear, anxiety or frustration by achieving a growth mindset, which will become your ultimate weapon against anything that can stand on the way to your dreams.",
 
       //Section 2:
-      Home_Section3_Text1: "You will learn to transform a simple idea into a complete feature screenplay.",
+      Home_Section3_Text1: "In the Quest you'll learn to transform a simple idea into a complete feature screenplay.",
       Home_Section3_Text2: "You will learn to link your story to audiences by creating a myth around your idea.",
       Home_Section3_Text3: "You will learn to research your audience and create an attractive pitch to sell your project.",
       Home_Section3_Text4: "You will learn what it takes to be a writer and how to match these requirements.",

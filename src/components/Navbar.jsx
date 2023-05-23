@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import image from '../img/logo.26_nov.png'
 import Hamburger from 'hamburger-react';
 import { TiltWrapper } from '../hoc/SectionWrapper';

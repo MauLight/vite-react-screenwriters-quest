@@ -1,32 +1,3 @@
-/*
-<div className="flex flex-col mb-16">
-                <div className="flex">
-                    <Text className="font-secondary pl-24" weight="bold" size={50}>Are you ready for THE QUEST?</Text>
-                </div>
-                <div className="flex justify-between gap-x-5 w-[100%] px-48 py-[50px]">
-                    <img src={book} />
-                    <Text className="font-secondary flex items-center" size={60} weight="bold">+</Text>
-                    <img src={typewriter} />
-                    <Text className="font-secondary flex items-center" size={60} weight="bold">+</Text>
-                    <img src={brain} />
-                    <Text className="font-secondary flex items-center" size={60} weight="bold">=</Text>
-                    <img src={draft} />
-                </div>
-            </div>
-            <div className="flex grid-col-2">
-                <div className="w-[100%] px-[120px]">
-                    <Text className="font-tertiary" size={20}>
-                        {store.Home_Section1_Text2}
-                    </Text>
-                    <Text className="mt-5 font-tertiary" size={20}>
-                        {store.Home_Section1_Text3}
-                    </Text>
-                </div>
-                <div className="w-[100%]">B</div>
-            </div>
-
-*/
-
 import { Button, Text } from "@nextui-org/react"
 import { TiltWrapper } from "../hoc/SectionWrapper"
 import { useContext } from "react"
@@ -100,4 +71,4 @@ function Home_Section2() {
     )
 }
 
-export default TiltWrapper(Home_Section2, "Home_section2")
+export default Home_Section2
