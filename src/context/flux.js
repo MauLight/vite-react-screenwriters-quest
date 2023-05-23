@@ -1,7 +1,15 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      token: null,
+
+      //HOME:
+      //Section 1:
+      Home_Section1_Title1: "Are you ready for THE QUEST?",
+      Home_Section1_Text1: "In THE QUEST you will learn a new way of writing and a new way of living. Shape a single idea into a powerful MYTH that links to your audience while shaping your own LIFE to become a professional writer.",
+      Home_Section1_Text2: "Push yourself beyond the limits to become a professional writer by learning how to write in a completely different way. Build the myth of your story and use it as the seed from which every element, every decision your characters make will sprout. Achieve the most valued skill in all writing, unity.",
+      Home_Section1_Text3: "But that’s not all because you will also learn how to overcome any fear, anxiety or frustration by achieving a growth mindset, which will become your ultimate weapon against anything that can stand on the way to your dreams.",
+
+      //Lesson 01 - Dramatic Basis of Story  
       concept: "Idea or Concept",
       value: "Community Value",
       theme: "THEME",

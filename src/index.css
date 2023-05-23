@@ -5,3 +5,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+video {
+    object-fit: cover !important;
+    border-radius: 30px !important;
+}
