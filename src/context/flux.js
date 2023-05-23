@@ -9,6 +9,14 @@ const getState = ({ getStore, getActions, setStore }) => {
       Home_Section1_Text2: "Push yourself beyond the limits to become a professional writer by learning how to write in a completely different way. Build the myth of your story and use it as the seed from which every element, every decision your characters make will sprout. Achieve the most valued skill in all writing, unity.",
       Home_Section1_Text3: "But that’s not all because you will also learn how to overcome any fear, anxiety or frustration by achieving a growth mindset, which will become your ultimate weapon against anything that can stand on the way to your dreams.",
 
+      //Section 2:
+      Home_Section3_Text1: "You will learn to transform a simple idea into a complete feature screenplay.",
+      Home_Section3_Text2: "You will learn to link your story to audiences by creating a myth around your idea.",
+      Home_Section3_Text3: "You will learn to research your audience and create an attractive pitch to sell your project.",
+      Home_Section3_Text4: "You will learn what it takes to be a writer and how to match these requirements.",
+      Home_Section3_Text5: "You will gain confidence in speaking in public by pitching your ideas.",
+      Home_Section3_Text6: "At the end of the quest, you will have a ready-made script and pitch presentation.",
+
       //Lesson 01 - Dramatic Basis of Story  
       concept: "Idea or Concept",
       value: "Community Value",
